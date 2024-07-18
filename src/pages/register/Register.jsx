@@ -44,7 +44,8 @@ function Register() {
                 setUser(data)
                 setId('')
                 setPw('')
-                alert('아이디가 생성되었습니다. 로그인 페이지로 이동하여 로그인 해 주세요!')
+                navigate('/')
+                alert('아이디가 생성되었습니다. 로그인 페이지로 이동합니다!')
             }
         } catch (error) {
             console.log("에러 발생", error)
@@ -69,7 +70,7 @@ function Register() {
                 />
                 <br />
                 <StButton onClick={onCreateUserButtonHandler}>완료</StButton>
-                <StButton onClick={() => navigate('/')}>로그인페이지로</StButton>
+                {/* <StButton onClick={() => navigate('/')}>로그인페이지로</StButton> */}
             </div>
         </StContainer>
     )
