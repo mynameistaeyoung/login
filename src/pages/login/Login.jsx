@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function Login() {
     const [id, setId] = useState('')
     const [pw, setPw] = useState('')
+    const navigate = useNavigate();
 
     const [userId, setUserId] = useState(null)
 
@@ -26,9 +27,6 @@ function Login() {
             console.log("error", error)
         }
     }
-
-    const navigate = useNavigate();
-
     return (
         <Container>
             <h1>Log in</h1>
@@ -53,3 +51,4 @@ function Login() {
 }
 
 export default Login
+
